@@ -1,0 +1,10 @@
+{
+    "mcpServers": {
+        "great-learning-mcp": {
+            "command": "/Users/bodhi/Library/Caches/pypoetry/virtualenvs/mcp-servers-_G1gCiEy-py3.12/bin/python",
+            "args": [
+                "/Users/bodhi/Developer/mcp-servers/great_learning/great_learning_mcp.py"
+            ]
+        }
+    }
+}
