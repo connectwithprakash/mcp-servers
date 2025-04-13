@@ -60,9 +60,9 @@ env.bak/
 venv.bak/
 
 # Project specific
-great_learning/*.parquet
-great_learning/great_learning_full.txt
-great_learning/great_learning_metadata.json
+great_learning/data/*.parquet
+great_learning/data/great_learning_full.txt
+great_learning/data/great_learning_metadata.json
 
 # OS specific files
 .DS_Store

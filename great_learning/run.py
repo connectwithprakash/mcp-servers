@@ -85,8 +85,8 @@ def main():
 
     print("\n✅ Data scraping completed successfully!")
     print("\nYou can find the results in:")
-    print("  - great_learning_full.txt: Raw scraped content")
-    print("  - great_learning_vectorstore.parquet: Vector store for similarity search")
+    print("  - data/great_learning_full.txt: Raw scraped content")
+    print("  - data/great_learning_vectorstore.parquet: Vector store for similarity search")
     return True
 
 

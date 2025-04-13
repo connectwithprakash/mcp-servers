@@ -101,7 +101,7 @@ def get_great_learning_dir():
 def load_processed_urls() -> Set[str]:
     """Load previously processed URLs from metadata file."""
     processed_urls = set()
-    metadata_path = os.path.join(get_great_learning_dir(), "great_learning_metadata.json")
+    metadata_path = os.path.join(get_great_learning_dir(), "data/great_learning_metadata.json")
 
     if os.path.exists(metadata_path):
         try:
@@ -117,7 +117,7 @@ def load_processed_urls() -> Set[str]:
 
 def save_processed_urls(processed_urls: Set[str]):
     """Save processed URLs to metadata file."""
-    metadata_path = os.path.join(get_great_learning_dir(), "great_learning_metadata.json")
+    metadata_path = os.path.join(get_great_learning_dir(), "data/great_learning_metadata.json")
 
     try:
         metadata = {"processed_urls": list(processed_urls)}
@@ -184,7 +184,7 @@ def bs4_extractor(html: str) -> str:
 def load_existing_documents():
     """Load existing documents from file."""
     documents = []
-    document_path = os.path.join(get_great_learning_dir(), "great_learning_full.txt")
+    document_path = os.path.join(get_great_learning_dir(), "data/great_learning_full.txt")
 
     if os.path.exists(document_path):
         from langchain_community.document_loaders import TextLoader
@@ -352,7 +352,7 @@ def save_documents(documents):
         return
 
     # Open the output file
-    output_filename = os.path.join(get_great_learning_dir(), "great_learning_full.txt")
+    output_filename = os.path.join(get_great_learning_dir(), "data/great_learning_full.txt")
 
     with open(output_filename, "w") as f:
         # Write each document with progress bar
@@ -445,7 +445,7 @@ def create_vectorstore(splits):
     )
 
     # Check if vector store already exists
-    persist_path = os.path.join(get_great_learning_dir(), "great_learning_vectorstore.parquet")
+    persist_path = os.path.join(get_great_learning_dir(), "data/great_learning_vectorstore.parquet")
 
     if os.path.exists(persist_path):
         print(f"Existing vector store found at {persist_path}")

@@ -35,7 +35,7 @@ def great_learning_query_tool(query: str):
     )
 
     # Get path to the vector store
-    persist_path = os.path.join(get_great_learning_dir(), "great_learning_vectorstore.parquet")
+    persist_path = os.path.join(get_great_learning_dir(), "data/great_learning_vectorstore.parquet")
 
     # Create retriever from vector store
     retriever = SKLearnVectorStore(embedding=embeddings, persist_path=persist_path, serializer="parquet").as_retriever(
@@ -65,7 +65,7 @@ def get_all_great_learning_docs() -> str:
         str: The contents of the Great Learning documentation
     """
     # Local path to the Great Learning documentation
-    doc_path = os.path.join(get_great_learning_dir(), "great_learning_full.txt")
+    doc_path = os.path.join(get_great_learning_dir(), "data/great_learning_full.txt")
     try:
         with open(doc_path, "r") as file:
             return file.read()

@@ -52,9 +52,9 @@ poetry run python run.py
 
 The script will:
 1. Scrape the Great Learning website
-2. Save the raw content to `great_learning_full.txt`
+2. Save the raw content to `data/great_learning_full.txt`
 3. Split the documents into chunks
-4. Create a vector store saved as `great_learning_vectorstore.parquet`
+4. Create a vector store saved as `data/great_learning_vectorstore.parquet`
 
 ## Customization
 
